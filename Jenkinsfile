@@ -6,7 +6,7 @@ pipeline {
 				label "master"
             }
 			steps {
-				git 'https://github.com/shra1kumarp/pipeline_script.git'
+				git 'git@github.com:shra1kumarp/pipeline_script.git'
 				withEnv(["PATH+MAVEN=${tool 'M3'}/bin"]) {
 					sh "mvn clean package"		  
 				}
